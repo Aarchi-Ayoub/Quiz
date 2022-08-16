@@ -2,7 +2,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // Modules
-import Home from '../modules/Home/index';
+import Home from 'modules/Home';
+import Results from 'modules/Results';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,11 +18,13 @@ export default () => {
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen
-          name="Details"
-          component={Details}
-          options={({route}) => ({headerTitle: route.params.title})}
-        /> */}
+        <Stack.Screen
+          name="Results"
+          component={Results}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
