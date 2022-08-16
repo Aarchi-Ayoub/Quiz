@@ -33,6 +33,7 @@ const initialState = {
       time: 60,
     },
   ],
+  correctResponse: 0,
 };
 
 export const questionSlice = createSlice({
@@ -46,10 +47,17 @@ export const questionSlice = createSlice({
       // immutable state based off those changes
       state.question = data;
     },
+    setCorrect: state => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.correctResponse += 1;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {setQuestion} = questionSlice.actions;
+export const {setQuestion, setCorrect} = questionSlice.actions;
 
 export default questionSlice.reducer;
