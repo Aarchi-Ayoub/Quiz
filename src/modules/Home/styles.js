@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
   },
   // response
   response: {
-    marginTop: 10,
+    marginTop: 15,
   },
 });
