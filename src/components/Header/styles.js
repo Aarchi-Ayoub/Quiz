@@ -6,6 +6,13 @@ export const styles = StyleSheet.create({
     padding: '10%',
     borderBottomRightRadius: 35,
     borderBottomLeftRadius: 35,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   content: {
     marginVertical: '10%',
