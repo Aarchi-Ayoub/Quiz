@@ -41,7 +41,7 @@ export default () => {
           <Text style={styles.title}>Question</Text>
           <View style={styles.question}>
             <Text style={styles.count}>
-              {counter}/{length}
+              {parseInt(counter) + 1}/{length}
             </Text>
           </View>
         </View>
